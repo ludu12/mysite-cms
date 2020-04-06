@@ -19,6 +19,12 @@
     "start:watch": "nodemon --watch src/ --exec npm run start:local"
   },
   "dependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/runtime": "7.4.4",
     "@keystonejs/adapter-mongoose": "^7.0.0",
     "@keystonejs/app-admin-ui": "^5.9.4",
     "@keystonejs/app-graphql": "^5.1.5",
@@ -29,15 +35,7 @@
     "@keystonejs/keystone": "^7.1.0",
     "babel-plugin-istanbul": "^5.2.0",
     "cross-env": "^5.2.0",
-    "dotenv": "^8.2.0"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.7.7",
-    "@babel/core": "^7.7.7",
-    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
-    "@babel/plugin-transform-runtime": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
-    "@babel/runtime": "7.4.4",
+    "dotenv": "^8.2.0",
     "prettier": "^1.17.1"
   }
 }
