@@ -15,7 +15,7 @@
     "clean": "rimraf ./dist && rimraf ./build",
     "format": "prettier --write **/*.{js,jsx,tsx}",
     "start": "cross-env NODE_ENV=production keystone start",
-    "start:local": "npm run babel && cross-env NODE_ENV=development DISABLE_LOGGING=true keystone dev",
+    "start:local": "npm run babel && cross-env NODE_ENV=development keystone dev",
     "start:watch": "nodemon --watch src/ --exec npm run start:local"
   },
   "dependencies": {
