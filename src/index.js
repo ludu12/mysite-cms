@@ -11,11 +11,15 @@ import { TechStackSchema } from './lists/tech-stack';
 import { ProjectSchema } from './lists/project';
 import { ClientSchema } from './lists/client';
 
+const expressSession = require('express-session');
+const MongoStore = require('connect-mongo')(expressSession);
+
 const PROJECT_NAME = 'mysite';
 
 export const keystone = new Keystone({
   name: PROJECT_NAME,
   secureCookies: false,
+  sessionStore: new MongoStore({url: process.env.MONGODB_URI}),
   adapter: new Adapter(),
   onConnect: initializeData,
 });
@@ -33,6 +37,10 @@ const authStrategy = keystone.createAuthStrategy({
 });
 
 export const apps = [
-  new GraphQLApp(),
+  new GraphQLApp({
+    apollo: {
+      introspection: true
+    }
+  }),
   new AdminUIApp({ enableDefaultRoute: true, authStrategy }),
 ];
