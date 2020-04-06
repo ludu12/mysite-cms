@@ -15,6 +15,7 @@ const PROJECT_NAME = 'mysite';
 
 export const keystone = new Keystone({
   name: PROJECT_NAME,
+  secureCookies: false,
   adapter: new Adapter(),
   onConnect: initializeData,
 });
