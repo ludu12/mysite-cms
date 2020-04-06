@@ -1,6 +1,5 @@
 import { Keystone } from '@keystonejs/keystone';
 import { GraphQLApp } from '@keystonejs/app-graphql';
-import { StaticApp } from '@keystonejs/app-static';
 import { AdminUIApp } from '@keystonejs/app-admin-ui';
 import { MongooseAdapter as Adapter } from '@keystonejs/adapter-mongoose';
 import { UserSchema } from './lists/user';

@@ -1,0 +1,15 @@
+{
+	"plugins": [
+		[
+			"@babel/plugin-transform-runtime",
+			{
+				"regenerator": true
+			}
+		],
+		"istanbul",
+		"@babel/plugin-proposal-optional-chaining"
+	],
+	"presets": [
+		"@babel/preset-env"
+	]
+}
