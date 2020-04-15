@@ -3,6 +3,7 @@ import { Wysiwyg } from '@keystonejs/fields-wysiwyg-tinymce';
 
 export const ProjectSchema = {
   schemaDoc: 'Posts created by users',
+  labelField: 'title',
   fields: {
     title: { type: Text, isRequired: true },
     user: { type: Relationship, ref: 'User.projects' },

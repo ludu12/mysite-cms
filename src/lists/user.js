@@ -19,6 +19,7 @@ const access = { userIsAdmin, userOwnsItem, userIsAdminOrOwner };
 
 export const UserSchema = {
   schemaDoc: 'User information',
+  labelField: 'name',
   fields: {
     name: { type: Text, isRequired: true },
     email: { type: Text, isUnique: true },
